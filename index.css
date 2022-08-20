@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    /*background-color: #bce3c5;*/
+}
+
+a {
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.big-box {
+	width: 100%;
+	/*background-color: #78827a;*/
+	height: 80px;
+	padding-left: 0;
+	border-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: black;
+}
+
+.title {
+	padding-left: 45px;
+	display: inline-block;
+}
+
+.espaçamento {
+	display: inline-block;
+	width: 450px;
+}
+
+.box-login {
+	padding: 12px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 6px;
+	border-color: #2fc24f;
+	margin-top: 15px;
+	width: 170px;
+	display: inline-block;
+	/*background-color: red;*/
+	text-align: center;
+	height: 16px;
+}
+
+.box-cadastro {
+	padding: 12px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 6px;
+	border-color: #2fc24f;
+	margin-top: 15px;
+	width: 170px;
+	display: inline-block;
+	/*background-color: red;*/
+	text-align: center;
+	height: 16px;
+}
+
+.link {
+	color: black;
+}
+
+.box-submit {
+	margin-left: 4%;
+	height: 40px;
+	width: 100%;
+/*	background-color: pink;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+	border-color: black;*/
+}
+
+span {
+	font-size: 18px;
+}
+
+.imagem {
+	display: inline-block;
+}
+
+.espaçamento2 {
+	display: inline-block;
+	width: 360px;
+}
+
+.inputBox {
+	display: inline-block;
+	padd
+	padding-left: 0;
+	height: 20px;
+	width: 30%;
+	text-align: center;
+/*	background-color: #bce3c5;
+	border-radius: 8px;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #1dc241;*/
+}
+
+.submit {
+	padding-top: 100px;
+	padding-bottom: 160px;
+/*	background-color: blue;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+	border-color: black;*/
+
+}
+
+#sub {
+	height: 40px;
+	width: 300px;
+	border-style: solid;
+	border-width: 0.5px;
+	border-radius: 4px;
+	border-color: black;
+}
+
+#en {
+	height: 40px;
+	width: 90%;
+	background-color: #1dc241;
+	border-style: solid;
+	border-radius: 4px;
+	border-color: #1dc241;
+}
+
+/*
+
+cor verde: #2cde53
+
+li {
+	border: 5px;
+	border-color: darkred;
+    list-style: none;
+    height: 40px;
+}
+
+.caixaL {
+    display: inline;
+    margin-left: 40px;
+}
+
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	height: 600px;
+	overflow: hidden;
+	background-color: blueviolet;
+	list-style: none;
+	text-align: right;
+    display: inline;
+}
+
+li a {
+	padding: 8px;
+	text-decoration: none;
+	color: black;
+}
+*/
