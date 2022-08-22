@@ -14,9 +14,13 @@ function capturar() {
 	var sql = "SELECT email FROM users"
 	console.log(sql)
 
-	db.transaction(function(login) {
-		let lo = login.executeSql(sql)
-		console.log(lo)
-	})
+	db.transaction(t => t.executeSql(
+		'SELECT u.email FROM users u ', [], (t, result) => console.log(result.rows)
+	))
+
+	//db.transaction(function(login) {
+	//	let lo = login.executeSql(sql)
+	//	console.log(lo)
+	//})
 
 }
