@@ -3,25 +3,29 @@ db.transaction(function(criar) {
 	criar.executeSql("CREATE TABLE users (ID PRYMARY KEY, email TEXT, senha TEXT)")
 })
 
-function testaEmail(x) {
+function testaEmail(x, login) {
 
 	if (x.length > 0) {
 		login = "deu tudo certo"
 		console.log(login)
+		return login
 	} else {
 		login = "email não cadastrado"
 		console.log(login)
+		return login
 	}
 }
 
-function testaSenha(x) {
+function testaSenha(x, key) {
 
 	if (x.length > 0) {
 		key = "deu tudo certo"
 		console.log(key)
+		return key
 	} else {
 		key = "senha incorreta"
 		console.log(key)
+		return key
 	}
 }
 
@@ -33,12 +37,12 @@ function capturar() {
 	var key = ""
 
 	db.transaction(t => t.executeSql(
-		"select email from users where email='" + email + "'", [], (t, result) => testaEmail(result.rows)
+		"select email from users where email='" + email + "'", [], (t, result) => testaEmail(result.rows, login)
 		)
 	)
 
 	db.transaction(s => s.executeSql(
-		"select senha from users where senha='" + senha + "'", [], (s, resultS) => testaSenha(resultS.rows)
+		"select senha from users where senha='" + senha + "'", [], (s, resultS) => testaSenha(resultS.rows, key)
 		)
 	)
 
