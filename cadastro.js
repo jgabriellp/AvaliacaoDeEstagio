@@ -9,6 +9,9 @@ function teste(x) {
 	if (x.length > 0) {
 		string = "Esse email já foi cadastrado"
 		console.log(string)
+		document.getElementById("email").value = ""
+		document.getElementById("senha").value = ""
+		alert(string)
 	} else {
 		let email = document.getElementById("email").value
 		let senha = document.getElementById("senha").value
@@ -16,6 +19,8 @@ function teste(x) {
 		db.transaction(function(armazenar) {
 			armazenar.executeSql("INSERT INTO users (email, senha) VALUES (?, ?)", [email, senha])
 		})
+
+		alert("Email cadastrado com sucesso!")
 	}
 }
 
