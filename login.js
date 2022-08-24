@@ -21,9 +21,7 @@ function testa(x, email, senha) {
 		))
 
 	} else {
-		document.getElementById("email").value = ""
-		document.getElementById("senha").value = ""
-		alert("Email incorreto.")
+		alert("Acesso incorreto.")
 		console.log("Email ou senha incorreto(s).")
 	}
 }
