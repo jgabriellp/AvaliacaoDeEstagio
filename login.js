@@ -7,14 +7,35 @@ let login = ""
 let key = ""
 let res = "deu tudo certo"
 
-function testaEmail(x) {
+function testa(x, email, senha) {
 
 	if (x.length > 0) {
+		document.getElementById("email").value = ""
+		document.getElementById("senha").value = ""
 		login = "deu tudo certo"
-		key = "deu tudo certo"
-		console.log(login, key)
+		//alert("Você logou com sucesso!")
+		console.log(login)
+
+		db.transaction(s => s.executeSql(
+			"select senha from users where senha='" + senha + "'", [], (s, resultS) => testaSenha(resultS.rows)
+		))
+
 	} else {
-		console.log("email ou senha incorreto(s)")
+		document.getElementById("email").value = ""
+		document.getElementById("senha").value = ""
+		alert("Email incorreto.")
+		console.log("Email ou senha incorreto(s).")
+	}
+}
+
+function testaSenha(x) {
+	if (x.length > 0) {
+		document.getElementById("email").value = ""
+		document.getElementById("senha").value = ""
+		alert("Você logou com sucesso!")
+	} else {
+		document.getElementById("senha").value = ""
+		alert("Senha incorreta.")
 	}
 }
 
@@ -25,7 +46,7 @@ function capturar() {
 	db.transaction(t => t.executeSql(
 		"SELECT email, senha FROM users WHERE (email LIKE '%" + email + "%') AND (senha LIKE '%" + senha + "%')",
 		[], 
-		(t, result) => testaEmail(result.rows)
+		(t, result) => testa(result.rows, email, senha)
 	))
 
 }
