@@ -12,6 +12,7 @@ function testaEmail(x) {
 	if (x.length > 0) {
 		login = "deu tudo certo"
 		key = "deu tudo certo"
+		console.log(login, key)
 	} else {
 		console.log("email ou senha incorreto(s)")
 	}
