@@ -19,14 +19,16 @@
 		</div>
 
 		<div class="box-submit">
-			<form>
+			<form onsubmit="capturar()">
 				<br><br>
 				<span class="login">Faça seu login</span><br><br>
-				<input type="text" id="email" name="email" placeholder=" Email:"><br><br>
+				<input type="email" id="email" name="email" placeholder=" Email:"><br><br>
 				<input type="password" id="senha" name="senha" placeholder=" Senha:"><br><br>
+				<!--<input type="submit" id="en" value="Entrar">-->
+				<button id="en" type="button" onclick="capturar()">Entrar</button>
 			</form>
 			
-			<button id="en" onclick="capturar()">Entrar</button>
+			<!--<button id="en" type="button" onclick="capturar()">Entrar</button>-->
 		</div>
 
 		<footer class="footer">
