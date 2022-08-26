@@ -48,4 +48,24 @@ O comando Sql da função capturar retorna o email e a senha, mesmo que a senha 
 
 ### Observações (coisas que eu procuraria melhorar):
 
-A aplicação não é de fato uma API robusta, portanto é limitada ao que foi programada para fazer e bastante manual.
+A aplicação não é de fato uma API robusta, portanto é limitada ao que foi programada para fazer e bastante manual. Caso fose de fato uma API robusta, poderia ser acessada de fato a tela do usuário com os acessos daquele usuário em específico com outras tantas diversas opções de implementação. Entretando, a aplicação só avalia de fato o login e o cadastro do usuário.
+
+## Banco de dados
+
+Para facilitar a instalação das dependências e também a avaliação dessa parte do projeto, foram utilizados comandos MySQL no webSql. Antes de qualquer coisa, foi criado o banco chamado "MeuBanco" que contém uma tabela chamada users. Nessa tabela foram criados os campos de identificação, de email e de senha no tipo text. E nesse banco serão feitas as pesquisas e inserções, caso sejam necessárias.
+
+Os comandos utilizados no Cadastro js foram esses:
+
+- "CREATE TABLE users (ID PRYMARY KEY, email TEXT, senha TEXT)", para criar a tabela ou apenas acessá-la caso já tenha sido criada;
+- "select email from users where email='%email%'", para ver se o email existe na tabela;
+- "INSERT INTO users (email, senha) VALUES (email, senha)", para adicionar na tabela os emails cadastrados.
+
+Os comandos utilizados no Login js foram esses:
+
+- "CREATE TABLE users (ID PRYMARY KEY, email TEXT, senha TEXT)", para criar a tabela ou apenas acessá-la caso já tenha sido criada;
+- "SELECT email, senha FROM users WHERE (email LIKE '%email%') AND (senha LIKE '%senha%')", para ver se o email e a senha digitadas estão na tabela;
+- "select senha from users where senha='senha'", para ver se a senha digitada está de fato na tabela.
+
+### Observações (coisas que eu procuraria melhorar):
+
+A criação de um banco robusto de fato, onde eu pudesse armazenar mais informações do usuário (como cpf, email de recuperação, número para resgate) e mais testes pudessem ser realizados.
