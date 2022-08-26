@@ -17,3 +17,7 @@ Em seguida, para finalizar, é possível ver o rodapé da pagina. Foi utilizada 
 Como a estilização foi quase que exatamente a mesma, então pode-se abstrair para uma explicação só como padrão. A página recebeu um margin e border 0, o body um width de 100% com a fonte padrão "'Open Sans', sans-serif".
 
 No header, foi utilizado como padrão o "display: block", além de uma altura definida como 80 pixels. As bordas estão sólidas, sendo que a borda inferior recebeu a cor preta e uma largura de 1 pixel para visualização e separação nítida do que seria o header e o resto da página. Já dentro do header, todas as informações estão inline-block, para que ficassem uma ao lado da outra. A estilização do H1 seguiu o padrão do body, apenas com um afastamento do preenchimento esquerdo do header. Logo depois, ao lado direito do texto, temos uma div cujo único intuito é fazer a separação do h1 com os links de login e cadastro.
+
+Nos links de login e cadastro, a estilização foi a mesma. Bordas sólidas e com o radius circular ao redor, espaçadas de acordo com o posicionamento desejado. Ainda nelas, foi inserido o "hover", que permitiu a mudança de cor no momento em que o cursor do mouse passa por cima.
+
+Em seguida, já fora do header, é possível ver
