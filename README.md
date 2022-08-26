@@ -29,3 +29,9 @@ já no footer da página, é possível ver o rodapé com a borda superior sólid
 A página precisa ser adaptável para todos os formatos de tela, portanto eu procuraria melhorar esse quesito. Por seguir os padrões de sites como o sigaa, ele necessita ser arrastada para os lados para uma visualização completa. Talvez isso não seja tão evidente agora, mas numa página com muitas informações isso pode ser prejudicial.
 
 Além disso, o form não aceitou a função "onsubmit", para que quando o input type submit fosse clicado ele acionasse a função que entrega o formulario para o banco de dados. Por causa disso, fui forçado a fazer o botão de submissão.
+
+## Back end
+
+### Cadastro js
+
+Antes de qualquer coisa, o baco é criado e acessado por meio da variável "db". Se já existir, ele será apenas acessado e chamado através da variável "db". Em seguida, quando o formulário é preenchido e submetido, a função capturar lê e armazena os campos do form, imprime no console para avaliação do programador e então é chamado o método trasaction dentro da variável db, para que dentro de seus agumentos fosse chamada a arrow function com o "executeSql". A função executeSql, por sua vez, chama o comando sql em cima da variável que armazena o email digitado pelo usuário.
