@@ -20,4 +20,12 @@ No header, foi utilizado como padrão o "display: block", além de uma altura de
 
 Nos links de login e cadastro, a estilização foi a mesma. Bordas sólidas e com o radius circular ao redor, espaçadas de acordo com o posicionamento desejado. Ainda nelas, foi inserido o "hover", que permitiu a mudança de cor no momento em que o cursor do mouse passa por cima.
 
-Em seguida, já fora do header, é possível ver
+Em seguida, já fora do header, é possível ver a div que segura e amarra o formulário. Seu único intuito é dar posicionamento e forma às caixas de preenchimento (inputs) e ao botão de submissão. Cadas um desses elementos internos segue com o mesmo padrão de estilização dentro da div maior. A unica diferença entre os três é o background da estilização e a largura dos inputs que é diferente da do botão.
+
+já no footer da página, é possível ver o rodapé com a borda superior sólida e com largura de 0.5 pixels, além de uma margem do topo para forçá-lo a ser o último elemento da página. Dentro dele há também uma imagem com altura e largura de 80 pixels e um padding considerável à esquerda da página.
+
+### Observações (coisas que eu procuraria melhorar):
+
+A página precisa ser adaptável para todos os formatos de tela, portanto eu procuraria melhorar esse quesito. Por seguir os padrões de sites como o sigaa, ele necessita ser arrastada para os lados para uma visualização completa. Talvez isso não seja tão evidente agora, mas numa página com muitas informações isso pode ser prejudicial.
+
+Além disso, o form não aceitou a função "onsubmit", para que quando o input type submit fosse clicado ele acionasse a função que entrega o formulario para o banco de dados. Por causa disso, fui forçado a fazer o botão de submissão.
