@@ -45,3 +45,7 @@ Assim como no capturar, o banco é criado e acessado por meio da variável "db".
 A função testa segue o mesmo raciocício de verificação que a função "teste" do cadastro js, com a diferença de que nos argumentos ela traz o email e a senha. Caso o "result.rows" seja menor ou igual a zero, significa que o comando sql não retornou nada. Ou seja, o acesso está incorreto. Nesse caso, uma tela de alert é lançada para o usuário informando que o acesso está incorreto. Caso contrário, um novo result e um novo executeSql é lançado para a função "testaSenha" com o untuido de verificar a senha digitada.
 
 O comando Sql da função capturar retorna o email e a senha, mesmo que a senha não tenha sido digitada exatamente como ela é. Por causa disso, a função "testa" faz essa verificação extra executando um comando Sql para retornar a senha e conferir se o usuário digitou corretamente. Tal função funciona da mesma forma que as outras arrow functions, com a diferença de que o resultado é jogado para a função "testaSenha", e lá é feita a verificação se o retorno é maior que 0 (o caso do alert informando que o usuário logou com sucesso) ou se o resultado foi menor ou igual a zero (onde é lançado o alert infromando que a senha está incorreta).
+
+### Observações (coisas que eu procuraria melhorar):
+
+A aplicação não é de fato uma API robusta, portanto é limitada ao que foi programada para fazer e bastante manual.
